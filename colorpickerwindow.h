@@ -8,12 +8,6 @@
 #include <QLabel>
 #include <QVBoxLayout>
 
-// QT_BEGIN_NAMESPACE
-// namespace Ui {
-// class ColorPickerWindow;
-// }
-// QT_END_NAMESPACE
-
 class ColorPickerWindow : public QMainWindow {
     Q_OBJECT
 
@@ -34,7 +28,6 @@ private:
     QTextEdit *colorDisplay;
     QLabel *colorValueLabel;
     QLabel *charCountLabel;
-    // Ui::ColorPickerWindow *ui;
 };
 
 #endif // COLORPICKERWINDOW_H

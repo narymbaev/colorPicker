@@ -1,12 +1,9 @@
 #include "colorpickerwindow.h"
-// #include "ui_colorpickerwindow.h"
 #include <QHBoxLayout>
 
 ColorPickerWindow::ColorPickerWindow(QWidget *parent)
     : QMainWindow(parent)
-    // , ui(new Ui::ColorPickerWindow)
 {
-    // ui->setupUi(this);
 
     setWindowTitle("Color Picker");
     resize(400, 300);
@@ -51,13 +48,11 @@ ColorPickerWindow::ColorPickerWindow(QWidget *parent)
     connect(blueSlider, &QSlider::valueChanged, this, &ColorPickerWindow::updateColor);
     connect(colorDisplay, &QTextEdit::textChanged, this, &ColorPickerWindow::updateCharCount);
 
-    // Initial update
     updateColor();
     updateCharCount();
 }
 
 ColorPickerWindow::~ColorPickerWindow() {
-    // delete ui;
 }
 
 void ColorPickerWindow::updateColor() {
@@ -75,6 +70,5 @@ void ColorPickerWindow::updateColor() {
 
 void ColorPickerWindow::updateCharCount() {
     int count = colorDisplay->toPlainText().length();
-    // Update counter
     charCountLabel->setText(QString("Character COUNT: %1").arg(count));
 }
