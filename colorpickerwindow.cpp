@@ -1,8 +1,13 @@
 #include "colorpickerwindow.h"
+// #include "ui_colorpickerwindow.h"
 #include <QHBoxLayout>
 
 ColorPickerWindow::ColorPickerWindow(QWidget *parent)
-    : QMainWindow(parent) {
+    : QMainWindow(parent)
+    // , ui(new Ui::ColorPickerWindow)
+{
+    // ui->setupUi(this);
+
     setWindowTitle("Color Picker");
     resize(400, 300);
 
@@ -52,6 +57,7 @@ ColorPickerWindow::ColorPickerWindow(QWidget *parent)
 }
 
 ColorPickerWindow::~ColorPickerWindow() {
+    // delete ui;
 }
 
 void ColorPickerWindow::updateColor() {
